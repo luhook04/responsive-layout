@@ -178,7 +178,7 @@ button:hover {
 .project {
   background-color: white;
   display: grid;
-  border: 2px solid black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.245);
   border-radius: 15px;
   grid-template: 1fr auto / 1rem 1fr;
 }
@@ -198,7 +198,6 @@ button:hover {
 
 .project-text {
   padding: 10px 10px 0px;
-  margin-bottom: 30px;
 }
 
 .project-text h5 {
@@ -217,20 +216,83 @@ button:hover {
   flex-direction: column;
 }
 
-.announcements h4 {
+.announcements h4,
+.trending h4 {
   font-size: 1.4rem;
   margin: 0;
 }
 
-.announcement-content {
+.announcement h6 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+
+.announcement p {
+  opacity: 0.7;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.announcement-content,
+.trending-content {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.245);
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 15px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  padding: 10px;
 }
 
+.announcement-content:hover,
+.trending-content:hover {
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.245);
+}
+
+.announcement {
+  padding: 10px 5px;
+}
 .announcement-border {
   width: 100%;
   height: 1px;
-  background-color: lightgray;
+  background-color: rgb(147, 147, 147);
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+}
+
+.trend {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 5px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto 1fr;
+}
+
+.trend img {
+  padding-right: 5px;
+  grid-row: 1/3;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.trend-user {
+  margin: 0;
+  align-self: end;
+  grid-row: 1/2;
+}
+
+.trend-info {
+  margin: 0;
+  align-self: start;
+  grid-row: 2/3;
 }
